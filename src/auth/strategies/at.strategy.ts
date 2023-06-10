@@ -12,4 +12,8 @@ export class AtJwtStrategy extends PassportStrategy(Strategy, 'jwt') {
       secretOrKey: 'at-secret',
     });
   }
+
+  validate(payload) {
+    return payload;
+  }
 }
